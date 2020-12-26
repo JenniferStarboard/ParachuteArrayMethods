@@ -94,7 +94,7 @@ function CollectLabels(){
 	var cnt = labels.length;
 	
 	for(let i=0; i<cnt; i++) {
-		let regx = /\s+/;
+		let regx = /^\s+$/;
 		if((labels[i].getAttribute('type')=='text')&&(labels[i].value != "")&&(regx.test(labels[i].value) != true)){ //Should I be using ===?
 			priorities.push(labels[i].value);
 		}
